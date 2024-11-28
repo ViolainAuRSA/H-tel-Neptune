@@ -11,6 +11,10 @@ $sql = '
     `lastname` VARCHAR(40) NOT NULL,
     `admin` BOOLEAN NOT NULL DEFAULT FALSE
     );
+
+    CREATE TABLE IF NOT EXISTS `Chambres`(
+    `id` INT AUTO_INCREMENT NOT NULL PRIMARY KEY);
+
 ';
 
 $pdo->query($sql);
