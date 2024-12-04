@@ -14,8 +14,6 @@ try {
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, 
     ]);
 
-    // Message de succès (à retirer en production)
-    echo "Connexion réussie à la base de données.";
 } catch (Throwable $th) {
     // Gestion des erreurs avec un message clair
     die('Erreur de connexion à la base de données : ' . $th->getMessage());
