@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/../Database.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,6 +11,9 @@ require_once __DIR__ . '/../Database.php';
     <title>Hotel Neptune</title>
 </head>
 <body>
+    <nav>
+        <a href="reservation.php">nikomouk</a>
+    </nav>
     <h1>Hello</h>
 </body>
 </html>
