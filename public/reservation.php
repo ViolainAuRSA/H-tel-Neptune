@@ -1,40 +1,52 @@
 <?php
 // Connexion à la base de données
-$host = "localhost";
-$user = "root"; // Nom d'utilisateur MySQL
-$password = "password"; // Mot de passe MySQL
-$dbname = "hotel_neptune";
+$host = "database";
+$dbname = "app";
+$user = "app"; // Remplacez par vos identifiants
+$password = "app_password";
+$dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
 
-$conn = new mysqli($host, $user, $password, $dbname);
-
-// Vérification de la connexion
-if ($conn->connect_error) {
-    die("Connexion échouée : " . $conn->connect_error);
+try {
+    $pdo = new PDO($dsn, $user, $password, [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    ]);
+} catch (Throwable $th) {
+    die("Erreur de connexion à la base de données : " . $th->getMessage());
 }
 
-// Récupération des données du formulaire
-$name = $_POST['name'];
-$email = $_POST['email'];
-$checkin = $_POST['checkin'];
-$checkout = $_POST['checkout'];
-$room = $_POST['room'];
+// Vérification que le formulaire a été soumis
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['name'], $_POST['email'], $_POST['checkin'], $_POST['checkout'], $_POST['room'])) {
+        // Sécurisation des données
+        $name = htmlspecialchars($_POST['name']);
+        $email = htmlspecialchars($_POST['email']);
+        $checkin = htmlspecialchars($_POST['checkin']);
+        $checkout = htmlspecialchars($_POST['checkout']);
+        $room = htmlspecialchars($_POST['room']);
 
-// Préparation de la requête SQL
-$sql = "INSERT INTO reservations (name, email, checkin, checkout, room_type) 
-        VALUES (?, ?, ?, ?, ?)";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("sssss", $name, $email, $checkin, $checkout, $room);
+        // Requête SQL préparée avec PDO
+        $sql = "INSERT INTO reservations (name, email, checkin, checkout, room_type) 
+                VALUES (:name, :email, :checkin, :checkout, :room)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':name', $name);
+        $stmt->bindValue(':email', $email);
+        $stmt->bindValue(':checkin', $checkin);
+        $stmt->bindValue(':checkout', $checkout);
+        $stmt->bindValue(':room', $room);
 
-// Exécution de la requête
-if ($stmt->execute()) {
-    echo "Réservation réussie ! Merci, $name.";
+        // Exécution de la requête
+        if ($stmt->execute()) {
+            echo "Réservation enregistrée avec succès.";
+        } else {
+            echo "Une erreur est survenue lors de l'enregistrement de la réservation.";
+        }
+    } else {
+        echo "Veuillez remplir tous les champs du formulaire.";
+    }
 } else {
-    echo "Erreur lors de la réservation : " . $conn->error;
+    echo "Accès non autorisé.";
 }
-
-// Fermeture de la connexion
-$stmt->close();
-$conn->close();
 ?>
 
 <!DOCTYPE html>
