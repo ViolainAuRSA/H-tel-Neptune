@@ -7,18 +7,9 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
+
     <title>Accueil</title>
-    <style>
-        .user-info {
-            max-width: 500px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-            border-radius: 5px;
-        }
-    </style>
-=======
+
     <meta name="description" content="Bienvenue à l'Hôtel Neptune - Profitez d'un séjour inoubliable au bord de la mer avec des chambres confortables et un service exceptionnel.">
     <meta name="keywords" content="hôtel, Neptune, réservation, chambres, bord de mer, séjour, vacances, hôtel luxe">
     <meta name="author" content="Hôtel Neptune">
@@ -29,12 +20,8 @@ session_start();
     <meta name="twitter:card" content="summary_large_image">
     <title>Hôtel Neptune - Accueil</title>
     <link rel="stylesheet" href="styles.css">
->>>>>>> d30c81c09671865fc6be204d811a460a0b087538
 </head>
 <body>
-<<<<<<< HEAD
-    <h1>Bienvenue sur notre site</h1>
-
     <?php if(isset($_SESSION['user'])): ?>
         <div class="user-info">
             <h3>Informations de l'utilisateur :</h3>
@@ -46,7 +33,7 @@ session_start();
 
     <p><a href="Register.php">S'inscrire</a></p>
 </body>
-=======
+
 <header>
     <div class="container">
         <div class="logo-container">
@@ -69,7 +56,6 @@ session_start();
         </nav>
     </div>
 </header>
->>>>>>> d30c81c09671865fc6be204d811a460a0b087538
 
 
     <main>
