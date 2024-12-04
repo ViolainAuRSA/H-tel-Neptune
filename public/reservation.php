@@ -25,6 +25,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $checkout = htmlspecialchars($_POST['checkout']);
         $room = htmlspecialchars($_POST['room']);
 
+        // Validation des dates
+        if (strtotime($checkin) > strtotime($checkout)) {
+            echo "Erreur : La date d'arrivée ne peut pas être postérieure à la date de départ.";
+            exit; // Arrête l'exécution du script en cas d'erreur
+        }
+
         // Requête SQL préparée avec PDO
         $sql = "INSERT INTO reservations (name, email, checkin, checkout, room_type) 
                 VALUES (:name, :email, :checkin, :checkout, :room)";
@@ -49,6 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -60,12 +67,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <header>
         <h1>Hôtel Neptune</h1>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="reservation.html">Réservation</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+                <ul class="nav-menu">
+                    <li><a href="index.php" class="active">Accueil</a></li>
+                    <li><a href="reservation.php">Réservations</a></li>
+                    <li><a href="services.php">Services</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                </ul>
     </header>
+
+    <?php if (!empty($message)): ?>
+        <div class="message <?php echo (strpos($message, 'Erreur') !== false) ? 'error' : 'success'; ?>">
+            <?php echo $message; ?>
+        </div>
+    <?php endif; ?>
+
     <main>
         <h2>Réserver une chambre</h2>
         <form id="reservation-form" action="reservation.php" method="POST">

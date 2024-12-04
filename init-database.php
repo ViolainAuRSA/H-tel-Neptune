@@ -10,10 +10,11 @@ $sql = '
     `firstname` VARCHAR(40) NOT NULL,
     `lastname` VARCHAR(40) NOT NULL,
     `admin` BOOLEAN NOT NULL DEFAULT FALSE
-    );
+);
 
     CREATE TABLE IF NOT EXISTS `Chambres`(
-    `id` INT AUTO_INCREMENT NOT NULL PRIMARY KEY);
+    `id` INT AUTO_INCREMENT NOT NULL PRIMARY KEY
+);
  
     CREATE TABLE reservations (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -23,7 +24,6 @@ $sql = '
     checkout DATE NOT NULL,
     room_type VARCHAR(50) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-
 );
 ';
 
