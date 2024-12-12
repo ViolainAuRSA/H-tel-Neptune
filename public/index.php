@@ -42,7 +42,7 @@ session_start();
         <h1>Hôtel Neptune</h1>
         <nav>
             <ul>
-                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="/">Accueil</a></li>
                 <li><a href="#chambres">Nos Chambres</a></li>
                 <li><a href="#services">Nos Services</a>
                     <ul>
@@ -50,7 +50,7 @@ session_start();
                         <li><a href="#activites">Activités</a></li>
                     </ul>
                 </li>
-                <li><a href="#reservation">Réservation</a></li>
+                <li><a href="reservation.php">Réservation</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
