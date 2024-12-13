@@ -1,20 +1,35 @@
 <?php
-// Informations de connexion à la base de données
-$user = 'app'; // Remplacez par votre nom d'utilisateur MySQL
-$password = 'app_password'; // Remplacez par votre mot de passe MySQL
-$host = 'database'; // Remplacez par l'hôte (souvent 'localhost' ou '127.0.0.1')
-$dbname = 'app'; // Remplacez par le nom de votre base de données
+  // Déclaration d'une nouvelle classe
+  class connexionDB {
+    private $host    = 'database';  // nom de l'host  
+    private $name    = 'app';    // nom de la base de donnée
+    private $user    = 'app';       // utilisateur 
+    private $pass    = 'app_password';       // mot de passe (il faudra peut-être mettre '' sous Windows)
+    private $connexion;
+    
+    function __construct($host = null, $name = null, $user = null, $pass = null){
+      if($host != null){
+        $this->host = $host;           
+        $this->name = $name;           
+        $this->user = $user;          
+        $this->pass = $pass;
+      }
+      try{
+        $this->connexion = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->name,
+          $this->user, $this->pass, array(PDO::MYSQL_ATTR_INIT_COMMAND =>'SET NAMES UTF8mb4', 
+          PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+      }catch (PDOException $e){
+        echo 'Erreur : Impossible de se connecter  à la BDD !';
+        die();
+      }
+    }
 
-// Chaîne de connexion (DSN)
-$dsn = "mysql:dbname=$dbname;host=$host;charset=utf8mb4"; // Ajout de charset pour éviter les problèmes d'encodage
+    public function DB(){
+        return $this->connexion;
+    }
+  }
 
-try {
-    $pdo = new PDO($dsn, $user, $password, [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, 
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, 
-    ]);
+  $DBB = new connexionDB();
+  $DB = $DBB->DB(); 
 
-} catch (Throwable $th) {
-    // Gestion des erreurs avec un message clair
-    die('Erreur de connexion à la base de données : ' . $th->getMessage());
-}
+?>

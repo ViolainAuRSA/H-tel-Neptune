@@ -12,7 +12,7 @@
                 <?php if(isset($_SESSION['user'])): ?>
                     <li><a href="auth.php?logout=1">Déconnexion</a></li>
                 <?php else: ?>
-                    <li><a href="#" class="login-btn">Connexion</a></li>
+                    <li><a href="register.php" class="login-btn">Connexion</a></li>
                 <?php endif; ?>
             </ul>
         </nav>

@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Animation du header au scroll
-    let header = document.querySelector('header');
+    const header = document.querySelector('header');
     let lastScroll = 0;
 
     window.addEventListener('scroll', () => {
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (currentScroll <= 0) {
             header.classList.remove('scroll-up');
+            header.classList.remove('scroll-down');
             return;
         }
 
@@ -60,5 +61,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelectorAll('.room-card').forEach(card => {
         observer.observe(card);
+    });
+
+    const loginForm = document.getElementById('login-form');
+
+    loginForm.addEventListener('submit', function(event) {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        if (!email || !password) {
+            event.preventDefault();
+            alert('Veuillez remplir tous les champs.');
+        }
     });
 }); 
