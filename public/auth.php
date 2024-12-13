@@ -1,19 +1,27 @@
 <?php
-// Vérification que le formulaire a bien été soumis
+session_start();
+
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header('Location: index.php');
+    exit();
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Récupérer les données du formulaire
-    $nom = htmlspecialchars($_POST['nom']);
-    $prenom = htmlspecialchars($_POST['prenom']);
-    $email = htmlspecialchars($_POST['mail']);
-    $password = htmlspecialchars($_POST['password']);  // Note : vous devriez sécuriser ce mot de passe (voir étape suivante)
+    $email = $_POST['email'] ?? '';
+    $password = $_POST['password'] ?? '';
 
-    // Vous pouvez ici ajouter du code pour enregistrer ces informations dans une base de données.
-
-    // Par exemple : 
-    // Connexion à la base de données et insertion des données
-
-    // Puis rediriger l'utilisateur vers la page index.php
-    header("Location: /index.php");
-    exit; // N'oubliez pas d'utiliser exit() après une redirection.
+    // Ici, vous devrez implémenter la vérification avec votre base de données
+    // Ceci est un exemple simplifié
+    if ($email === 'admin@hotel.fr' && $password === 'admin123') {
+        $_SESSION['user'] = [
+            'email' => $email,
+            'role' => 'admin'
+        ];
+        echo json_encode(['success' => true]);
+    } else {
+        http_response_code(401);
+        echo json_encode(['success' => false, 'message' => 'Identifiants incorrects']);
+    }
 }
 ?>
