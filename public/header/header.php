@@ -9,10 +9,10 @@
                 <li><a href="#restaurant">Restaurant</a></li>
                 <li><a href="#piscine">Piscine & Spa</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <?php if(isset($_SESSION['user'])): ?>
-                    <li><a href="auth.php?logout=1">Déconnexion</a></li>
+                <?php if(isset($_SESSION['id'])): ?>
+                    <li><a href="logout.php">Déconnexion</a></li>
                 <?php else: ?>
-                    <li><a href="register.php" class="login-btn">Connexion</a></li>
+                    <li><a href="login.php">Connexion</a></li>
                 <?php endif; ?>
             </ul>
         </nav>
