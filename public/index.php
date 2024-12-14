@@ -1,7 +1,6 @@
 <?php
-session_start();
+include_once 'include.php'
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
