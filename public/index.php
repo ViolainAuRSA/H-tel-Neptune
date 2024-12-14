@@ -6,7 +6,7 @@ include_once 'include.php'
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hôtel Le Luxe - Votre séjour de rêve</title>
+    <title>Hôtel Neptune - Votre séjour de rêve</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -15,7 +15,7 @@ include_once 'include.php'
     <?php include 'header/header.php'; ?>
     <main>
         <section id="accueil" class="hero">
-            <h1>Bienvenue à l'Hôtel Le Luxe</h1>
+            <h1>Bienvenue à l'Hôtel Neptune</h1>
             <p>Une expérience unique au cœur de la ville</p>
             <br>
             <a href="reservation.php" class="cta-button">Réserver maintenant</a>
@@ -28,19 +28,19 @@ include_once 'include.php'
                     <img src="img/chambre_standard.png" alt="Chambre Standard">
                     <h3>Chambre Standard</h3>
                     <p>À partir de 120€/nuit</p>
-                    <a href="#" class="book-btn">Réserver</a>
+                    <a href="#" class="cta-button">Réserver</a>
                 </div>
                 <div class="room-card">
                     <img src="img/chambre_superieure.png" alt="Chambre Supérieure">
                     <h3>Chambre Supérieure</h3>
                     <p>À partir de 180€/nuit</p>
-                    <a href="#" class="book-btn">Réserver</a>
+                    <a href="#" class="cta-button">Réserver</a>
                 </div>
                 <div class="room-card">
                     <img src="img/suite.jpg" alt="Suite">
                     <h3>Suite</h3>
                     <p>À partir de 250€/nuit</p>
-                    <a href="#" class="book-btn">Réserver</a>
+                    <a href="#" class="cta-button">Réserver</a>
                 </div>
             </div>
         </section>
