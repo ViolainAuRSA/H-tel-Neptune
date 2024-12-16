@@ -107,7 +107,7 @@
     </header>
 
     <main class="main-content">
-        <div class="register-container">
+        <div class="login-container">
             <h1>Inscription</h1>
             <form method="POST">
                 <div class="form-group">
@@ -142,7 +142,7 @@
                 </div>
                 <button type="submit" class="submit-btn" name="register">S'inscrire</button>
             </form>
-            <div class="login-link">
+            <div class="register-link">
                 <p>Déjà un compte ? <a href="login.php">Se connecter</a></p>
             </div>
         </div>

@@ -27,47 +27,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php include 'header/header.php'; ?>
 
     <main>
-        <section class="contact-page">
-            <h1>Contactez-nous</h1>
-            
-            <?php if (isset($success)): ?>
-                <div class="alert success">
-                    Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.
-                </div>
-            <?php endif; ?>
-
-            <div class="contact-grid">
-                <form class="contact-form" method="POST">
-                    <div class="form-group">
-                        <label for="nom">Nom complet</label>
-                        <input type="text" id="nom" name="nom" required>
+            <div class="contact-form">
+                <h1>Contactez-nous</h1>
+                
+                <?php if (isset($success)): ?>
+                    <div class="alert success">
+                        Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.
                     </div>
+                <?php endif; ?>
 
+                <form method="POST">
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" placeholder="mail@exemple.com" required>
                     </div>
 
                     <div class="form-group">
                         <label for="sujet">Sujet</label>
-                        <select id="sujet" name="sujet" required>
-                            <option value="">Choisissez un sujet</option>
-                            <option value="reservation">Réservation</option>
-                            <option value="information">Demande d'information</option>
-                            <option value="reclamation">Réclamation</option>
-                            <option value="autre">Autre</option>
-                        </select>
+                        <input type="text" id="sujet" name="sujet" placeholder="Sujet" required>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Votre message" required></textarea>
                     </div>
 
-                    <button type="submit" class="cta-button">Envoyer le message</button>
+                    <button type="submit" class="cta-button">Envoyer</button>
                 </form>
             </div>
-        </section>
     </main>
 
     <?php include 'footer/footer.php'; ?>
