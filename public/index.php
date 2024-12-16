@@ -28,19 +28,19 @@ include_once 'include.php'
                     <img src="img/chambre_standard.png" alt="Chambre Standard">
                     <h3>Chambre Standard</h3>
                     <p>À partir de 120€/nuit</p>
-                    <a href="#" class="cta-button">Réserver</a>
+                    <a href="rooms/room1.php" class="cta-button">Réserver</a>
                 </div>
                 <div class="room-card">
                     <img src="img/chambre_superieure.png" alt="Chambre Supérieure">
                     <h3>Chambre Supérieure</h3>
                     <p>À partir de 180€/nuit</p>
-                    <a href="#" class="cta-button">Réserver</a>
+                    <a href="rooms/room2.php" class="cta-button">Réserver</a>
                 </div>
                 <div class="room-card">
                     <img src="img/suite.jpg" alt="Suite">
                     <h3>Suite</h3>
                     <p>À partir de 250€/nuit</p>
-                    <a href="#" class="cta-button">Réserver</a>
+                    <a href="rooms/room3.php" class="cta-button">Réserver</a>
                 </div>
             </div>
         </section>
