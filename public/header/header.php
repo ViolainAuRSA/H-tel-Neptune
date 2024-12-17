@@ -11,6 +11,7 @@
                 <li><a href="contact.php">Contact</a></li>
                 <?php if(isset($_SESSION['id'])): ?>
                     <li><a href="logout.php">Déconnexion</a></li>
+                    <li><a href="profile.php"><?php echo $_SESSION['lastname'] . " " . $_SESSION['firstname'] ?></a></li>
                 <?php else: ?>
                     <li><a href="login.php">Connexion</a></li>
                 <?php endif; ?>
