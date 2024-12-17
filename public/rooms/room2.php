@@ -1,5 +1,4 @@
 <?php
-// Prix par nuit pour la chambre standard
 $prix_par_nuit = 180;
 $capacite_max = 4;
 
@@ -21,6 +20,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $prix_total += (($nb_personnes - 1) * 20) * $nb_nuits;
     }
 }
+    session_start();
+    include_once '../../Database.php'; 
+    if (!isset($_SESSION['id'])){
+        header('Location: ../login.php');
+        exit();
+    }
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+        echo "ok";
+    }    
 ?>
 
 <!DOCTYPE html>

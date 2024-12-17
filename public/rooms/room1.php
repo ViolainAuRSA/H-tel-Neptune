@@ -21,6 +21,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $prix_total += (($nb_personnes - 1) * 20) * $nb_nuits;
     }
 }
+    session_start();
+    include_once '../../Database.php'; 
+    if (!isset($_SESSION['id'])){
+        header('Location: ../login.php');
+        exit();
+    }
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+        echo "ok";
+    }    
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chambre Standard - Réservation</title>
+    <title>Chambre Supérieure</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -54,8 +63,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <main class="room-page">
         <section class="room-details">
-            <h1>Chambre Standard</h1>
-            <img src="../img/chambre_standard.png" alt="Chambre Standard" style="width: 100%; max-width: 600px; height: 300px; object-fit: cover;">
+            <h1>Chambre Supérieure</h1>
+            <img src="../img/chambre_standard.png" alt="Chambre Supérieure" style="width: 100%; max-width: 600px; height: 300px; object-fit: cover;">
             <p>Prix par nuit : <?php echo $prix_par_nuit; ?>€</p>
             
             <form id="reservation-form" method="POST" class="reservation-form">
