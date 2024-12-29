@@ -14,7 +14,7 @@
             <div class="address-content">
                 <h4>Adresse</h4>
                 <p><i class="fas fa-map-marker-alt"></i> 200 Rue du Mas de Carbonnier</p>
-                <p>34000 Montpellier</p>
+                <p>34130 Mauguio</p>
                 <p><i class="fas fa-bus"></i> Bus : Ligne 28 - Arrêt Mas de Carbonnier</p>
                 <p><i class="fas fa-parking"></i> Parking Gratuit</p>
             </div>

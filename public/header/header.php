@@ -5,7 +5,6 @@
             </div>
             <ul class="nav-links">
                 <li><a href="/">Accueil</a></li>
-                <li><a href="reservation.php">Nos Chambres</a></li>
                 <li><a href="restaurant.php">Restaurant</a></li>
                 <li><a href="#piscine">Piscine & Spa</a></li>
                 <li><a href="contact.php">Contact</a></li>
