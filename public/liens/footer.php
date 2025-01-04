@@ -8,11 +8,11 @@
         </div>
         <div class="col-lg-4 p-4">
             <h5 class="mb-3">Liens rapides</h5>
-            <a href="#" class="d-inline-block text-decoration-none text-dark mb-2">Accueil</a> <br>
-            <a href="#" class="d-inline-block text-decoration-none text-dark mb-2">A propos</a> <br>
-            <a href="#" class="d-inline-block text-decoration-none text-dark mb-2">Chambres</a> <br>
-            <a href="#" class="d-inline-block text-decoration-none text-dark mb-2">Services</a> <br>
-            <a href="#" class="d-inline-block text-decoration-none text-dark mb-2">Contact</a> <br>
+            <a href="/" class="d-inline-block text-decoration-none text-dark mb-2">Accueil</a> <br>
+            <a href="about.php" class="d-inline-block text-decoration-none text-dark mb-2">A propos</a> <br>
+            <a href="rooms.php" class="d-inline-block text-decoration-none text-dark mb-2">Chambres</a> <br>
+            <a href="installations.php" class="d-inline-block text-decoration-none text-dark mb-2">Services</a> <br>
+            <a href="contact.php" class="d-inline-block text-decoration-none text-dark mb-2">Contact</a> <br>
         </div>
         <div class="col-lg-4 p-4">
             <h5 class="mb-3">Nous suivre</h5>                

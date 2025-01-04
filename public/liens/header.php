@@ -11,16 +11,16 @@
                         <a class="nav-link me-2" aria-current="page" href="/">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-2" aria-current="page" href="../chambres.php">Nos Chambres</a>
+                        <a class="nav-link me-2" aria-current="page" href="rooms.php">Nos Chambres</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-2" href="../installations.php">Nos Installations</a>
+                        <a class="nav-link me-2" href="installations.php">Nos Installations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-2" href="../contact.php">Contact</a>
+                        <a class="nav-link me-2" href="contact.php">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-2" href="../about.php">A propos de nous</a>
+                        <a class="nav-link me-2" href="about.php">A propos de nous</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
