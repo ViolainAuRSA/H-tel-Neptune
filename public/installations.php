@@ -11,6 +11,7 @@
             transition: all 0.3s;
         }
         .pop:hover {
+            border-top-color: var(--teal) !important;
             transform: scale(1.03);
             transition: all 0.3s;
         }
@@ -32,7 +33,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-4 border-dark pop">
+                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
                     <div class="d-flex align-items-center mb-2">
                         <img src="img/features/wifi.svg" width="40px">
                         <h5 class="m-0 ms-3 fw-bold">Wifi</h5>
@@ -43,7 +44,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-4 border-dark pop">
+                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
                     <div class="d-flex align-items-center mb-2">
                         <img src="img/features/wifi.svg" width="40px">
                         <h5 class="m-0 ms-3 fw-bold">Wifi</h5>
@@ -54,7 +55,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-4 border-dark pop">
+                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
                     <div class="d-flex align-items-center mb-2">
                         <img src="img/features/wifi.svg" width="40px">
                         <h5 class="m-0 ms-3 fw-bold">Wifi</h5>
@@ -65,7 +66,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-4 border-dark pop">
+                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
                     <div class="d-flex align-items-center mb-2">
                         <img src="img/features/wifi.svg" width="40px">
                         <h5 class="m-0 ms-3 fw-bold">Wifi</h5>
@@ -76,7 +77,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-4 border-dark pop">
+                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
                     <div class="d-flex align-items-center mb-2">
                         <img src="img/features/wifi.svg" width="40px">
                         <h5 class="m-0 ms-3 fw-bold">Wifi</h5>
@@ -87,7 +88,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-4 border-dark pop">
+                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
                     <div class="d-flex align-items-center mb-2">
                         <img src="img/features/wifi.svg" width="40px">
                         <h5 class="m-0 ms-3 fw-bold">Wifi</h5>
