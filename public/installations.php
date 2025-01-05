@@ -24,10 +24,6 @@
     <div class="my-5 px-4">
         <h2 class="fw-bold h-font text-center">Nos installations</h2>
         <div class="h-line bg-dark" style="width: 150px; margin: 0 auto; height: 1.7px;"></div>
-        <p class="text-center mt-3">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br> 
-            Facilis earum asperiores ratione quaerat perferendis tempore similique dolorem aspernatur, nulla modi.
-        </p>
     </div>
 
     <div class="container">
