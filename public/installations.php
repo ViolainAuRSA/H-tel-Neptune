@@ -42,8 +42,8 @@
             <div class="col-lg-4 col-md-6 mb-5 px-4">
                 <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
                     <div class="d-flex align-items-center mb-2">
-                        <img src="img/features/wifi.svg" width="40px">
-                        <h5 class="m-0 ms-3 fw-bold">Wifi</h5>
+                        <img src="img/features/tv.svg" width="40px">
+                        <h5 class="m-0 ms-3 fw-bold">Télévision</h5>
                     </div>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, aperiam consequuntur inventore voluptatum culpa ipsa dolor.
@@ -53,8 +53,8 @@
             <div class="col-lg-4 col-md-6 mb-5 px-4">
                 <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
                     <div class="d-flex align-items-center mb-2">
-                        <img src="img/features/wifi.svg" width="40px">
-                        <h5 class="m-0 ms-3 fw-bold">Wifi</h5>
+                        <img src="img/features/pool.svg" width="40px">
+                        <h5 class="m-0 ms-3 fw-bold">Piscine</h5>
                     </div>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, aperiam consequuntur inventore voluptatum culpa ipsa dolor.
@@ -64,8 +64,8 @@
             <div class="col-lg-4 col-md-6 mb-5 px-4">
                 <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
                     <div class="d-flex align-items-center mb-2">
-                        <img src="img/features/wifi.svg" width="40px">
-                        <h5 class="m-0 ms-3 fw-bold">Wifi</h5>
+                        <img src="img/features/service.svg" width="40px">
+                        <h5 class="m-0 ms-3 fw-bold">Service de chambre</h5>
                     </div>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, aperiam consequuntur inventore voluptatum culpa ipsa dolor.
@@ -75,19 +75,8 @@
             <div class="col-lg-4 col-md-6 mb-5 px-4">
                 <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
                     <div class="d-flex align-items-center mb-2">
-                        <img src="img/features/wifi.svg" width="40px">
-                        <h5 class="m-0 ms-3 fw-bold">Wifi</h5>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, aperiam consequuntur inventore voluptatum culpa ipsa dolor.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-5 px-4">
-                <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
-                    <div class="d-flex align-items-center mb-2">
-                        <img src="img/features/wifi.svg" width="40px">
-                        <h5 class="m-0 ms-3 fw-bold">Wifi</h5>
+                        <img src="img/features/parking.svg" width="40px">
+                        <h5 class="m-0 ms-3 fw-bold">Parking</h5>
                     </div>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, aperiam consequuntur inventore voluptatum culpa ipsa dolor.
