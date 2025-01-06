@@ -48,6 +48,7 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="settings.php">Paramètres</a>
                     </li>
+                    <a href="../" class="btn btn-light btn-sm">Retour au site</a>
                 </ul> 
             </div>
         </div>
