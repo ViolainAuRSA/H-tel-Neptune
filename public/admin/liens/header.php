@@ -43,7 +43,7 @@
                         <a class="nav-link text-white" href="#">Gestion des chambres</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Utilisateurs</a>
+                        <a class="nav-link text-white" href="demande_user.php">Demandes utilisateurs</a>
                     </li>   
                     <li class="nav-item">
                         <a class="nav-link text-white" href="settings.php">Paramètres</a>
