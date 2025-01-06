@@ -13,6 +13,7 @@ $insta = $contact_details['insta'];
 $twitter = $contact_details['twitter'];
 $linkedin = $contact_details['linkedin'];
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -66,35 +67,60 @@ $linkedin = $contact_details['linkedin'];
             </div>
             <div class="col-lg-6 col-md-6 px-4">
                 <div class="bg-white rounded shadow p-4">
-                    <form>
+                    <form method="POST">
                         <h5>Nous envoyer un message</h5>
                         <div class="mt-3">
                             <label class="form-label" style="font-weight: 500;">Nom</label>
-                            <input type="text" class="form-control shadow-none">
-                        </div>
-                        <div class="mt-3">
-                            <label class="form-label" style="font-weight: 500;">Prénom</label>
-                            <input type="text" class="form-control shadow-none">
+                            <input type="text" class="form-control shadow-none" name="nom" required>
                         </div>
                         <div class="mt-3">
                             <label class="form-label" style="font-weight: 500;">Email</label>
-                            <input type="email" class="form-control shadow-none">
+                            <input type="email" class="form-control shadow-none" name="email" required>
                         </div>
                         <div class="mt-3">
                             <label class="form-label" style="font-weight: 500;">Objet</label>
-                            <input type="text" class="form-control shadow-none">
+                            <input type="text" class="form-control shadow-none" name="objet" required>
                         </div>
                         <div class="mt-3">
                             <label class="form-label" style="font-weight: 500;">Message</label>
-                            <textarea class="form-control shadow-none" rows="5" style="resize: none;"></textarea>
+                            <textarea class="form-control shadow-none" rows="5" style="resize: none;" name="message" required></textarea>
                         </div>
-                        <button type="submit" class="btn text-white custom-bg mt-3">Envoyer</button>
+                        <button type="submit" class="btn text-white custom-bg mt-3" name="submit">Envoyer</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
+    <?php
+    if (isset($_POST['submit'])) {
+        // Récupérer les données du formulaire
+        $nom = $_POST['nom'];
+        $email = $_POST['email'];
+        $objet = $_POST['objet'];
+        $message = $_POST['message'];
+        $date = date('Y-m-d H:i:s');
+
+        // Préparer la requête avec des paramètres liés
+        $req = $DB->prepare("INSERT INTO `demande_user`(`name`, `email`, `sujet`, `message`, `date`, `vu`) VALUES (:name, :email, :sujet, :message, :date, :vu)");
+        
+        // Lier les paramètres
+        $req->bindParam(':name', $nom);
+        $req->bindParam(':email', $email);
+        $req->bindParam(':sujet', $objet);
+        $req->bindParam(':message', $message);
+        $req->bindParam(':date', $date);
+        $vu = 0; // Par défaut, "vu" est à 0 (non vu)
+        $req->bindParam(':vu', $vu);
+        
+        // Exécuter la requête
+        if ($req->execute()) {
+            echo "<script>alert('Message envoyé avec succès');</script>";
+        } else {
+            echo "<script>alert('Erreur lors de l\'envoi du message.');</script>";
+        }
+    }
+    ?>
 
     <?php require 'liens/footer.php'; ?>
 </body>
