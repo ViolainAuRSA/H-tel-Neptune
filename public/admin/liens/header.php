@@ -19,7 +19,7 @@
     <title>Admin Panel - Paramètres</title>
     <?php require 'liens/liens.php'; ?>
 </head>
-<body class="bg-light">
+<body class="bg-light z-index-1">
     
 <div class="container-fluid bg-dark text-light p-3 d-flex align-items-center justify-content-between sticky-top">
     <h3 class="mb-0 h-font">Hôtel Neptune Admin Panel</h3>

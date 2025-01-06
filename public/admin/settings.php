@@ -317,25 +317,25 @@ $pinterest = $contact_details['pinterest'];
     <?php require 'liens/scripts.php'; ?>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const modal = document.getElementById('generalSettings');
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('generalSettings');
 
-        modal.addEventListener('hidden.bs.modal', function () {
-            // Réinitialiser les valeurs des champs de la modale
-            document.getElementById('site_title_input').value = '<?php echo addslashes($site_title); ?>';
-            document.getElementById('site_about_input').value = '<?php echo addslashes($site_about); ?>';
-            document.getElementById('adresse_input').value = '<?php echo addslashes($adresse); ?>';
-            document.getElementById('gmap_input').value = '<?php echo addslashes($gmap); ?>';
-            document.getElementById('telephone_input').value = '<?php echo addslashes($telephone); ?>';
-            document.getElementById('email_input').value = '<?php echo addslashes($email); ?>';
-            document.getElementById('facebook_input').value = '<?php echo addslashes($facebook); ?>';
-            document.getElementById('insta_input').value = '<?php echo addslashes($insta); ?>';
-            document.getElementById('twitter_input').value = '<?php echo addslashes($twitter); ?>';
-            document.getElementById('linkedin_input').value = '<?php echo addslashes($linkedin); ?>';
-            document.getElementById('pinterest_input').value = '<?php echo addslashes($pinterest); ?>';
+            modal.addEventListener('hidden.bs.modal', function () {
+                // Réinitialiser les valeurs des champs de la modale
+                document.getElementById('site_title_input').value = '<?php echo addslashes($site_title); ?>';
+                document.getElementById('site_about_input').value = '<?php echo addslashes($site_about); ?>';
+                document.getElementById('adresse_input').value = '<?php echo addslashes($adresse); ?>';
+                document.getElementById('gmap_input').value = '<?php echo addslashes($gmap); ?>';
+                document.getElementById('telephone_input').value = '<?php echo addslashes($telephone); ?>';
+                document.getElementById('email_input').value = '<?php echo addslashes($email); ?>';
+                document.getElementById('facebook_input').value = '<?php echo addslashes($facebook); ?>';
+                document.getElementById('insta_input').value = '<?php echo addslashes($insta); ?>';
+                document.getElementById('twitter_input').value = '<?php echo addslashes($twitter); ?>';
+                document.getElementById('linkedin_input').value = '<?php echo addslashes($linkedin); ?>';
+                document.getElementById('pinterest_input').value = '<?php echo addslashes($pinterest); ?>';
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
 </html>
