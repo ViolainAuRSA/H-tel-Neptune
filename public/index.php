@@ -115,9 +115,6 @@
                                 Wifi
                             </span>
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                TV
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
                                 Climatisation
                             </span>
                         </div>
@@ -287,16 +284,16 @@
                 <h5 class="mt-3">Etoiles</h5>
             </div>
             <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="img/features/wifi.svg" width="80px">
-                <h5 class="mt-3">Wifi</h5>
+                <img src="img/features/tv.svg" width="80px">
+                <h5 class="mt-3">Télévision</h5>
             </div>
             <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="img/features/wifi.svg" width="80px">
-                <h5 class="mt-3">Wifi</h5>
+                <img src="img/features/service.svg" width="80px">
+                <h5 class="mt-3">Service de chambre</h5>
             </div>
             <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="img/features/wifi.svg" width="80px">
-                <h5 class="mt-3">Wifi</h5>
+                <img src="img/features/pool.svg" width="80px">
+                <h5 class="mt-3">Piscine</h5>
             </div>
             <div class="col-lg-12 text-center mt-5">
                 <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">Voir tous nos services</a>

@@ -35,7 +35,7 @@
                                 <h5 class="mb-3" style="font-size: 18px;">Options</h5>
                                 <div class="mb-2">
                                     <input type="checkbox" id="f1" class="form-check-input shadow-none me-1">
-                                    <label class="form-check-label" for="f1">Wifi</label>
+                                    <label class="form-check-label" for="f1">Télévision</label>
                                 </div>
                                 <div class="mb-2">
                                     <input type="checkbox" id="f2" class="form-check-input shadow-none me-1">
@@ -68,7 +68,7 @@
                 <div class="card mb-4 border-0 shadow">
                     <div class="row g-0 p-3 align-items-center">
                         <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
-                            <img src="img/rooms/1.png" class="img-fluid rounded" style="height: 250px;">
+                            <img src="img/rooms/2.png" class="img-fluid rounded" style="height: 250px;">
                         </div>
                         <div class="col-md-5 px-lg-3 px-md-3 px-0">
                             <h5 class="mb-1">Chambre Standard n°1</h5>
@@ -85,6 +85,333 @@
                                 </span>
                                 <span class="badge rounded-pill bg-light text-dark text-wrap">
                                     20 m² 
+                                </span>
+                            </div>
+                            <div class="facilities mb-3">
+                                <h6 class="mb-1">Services</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Petit déjeuner
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Accès à la piscine
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Wifi
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Climatisation
+                                </span>
+                            </div>
+                            <div class="guests">
+                                <h6 class="mb-1">Nombre de personnes</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    2 adultes
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    1 enfant
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
+                            <h6 class="mb-4">85€ / nuit</h6>
+                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
+                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4 border-0 shadow">
+                    <div class="row g-0 p-3 align-items-center">
+                        <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
+                            <img src="img/rooms/2.png" class="img-fluid rounded" style="height: 250px;">
+                        </div>
+                        <div class="col-md-5 px-lg-3 px-md-3 px-0">
+                            <h5 class="mb-1">Chambre Standard n°2</h5>
+                            <div class="features mb-3">
+                                <h6 class="mb-1">Caractéristiques</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    1 lit double
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Salle de bain
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Douche à l'italienne
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    20 m² 
+                                </span>
+                            </div>
+                            <div class="facilities mb-3">
+                                <h6 class="mb-1">Services</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Petit déjeuner
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Accès à la piscine
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Wifi
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Climatisation
+                                </span>
+                            </div>
+                            <div class="guests">
+                                <h6 class="mb-1">Nombre de personnes</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    2 adultes
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    1 enfant
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
+                            <h6 class="mb-4">85€ / nuit</h6>
+                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
+                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4 border-0 shadow">
+                    <div class="row g-0 p-3 align-items-center">
+                        <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
+                            <img src="img/rooms/2.png" class="img-fluid rounded" style="height: 250px;">
+                        </div>
+                        <div class="col-md-5 px-lg-3 px-md-3 px-0">
+                            <h5 class="mb-1">Chambre Standard n°3</h5>
+                            <div class="features mb-3">
+                                <h6 class="mb-1">Caractéristiques</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    1 lit double
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Salle de bain
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Douche à l'italienne
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    20 m² 
+                                </span>
+                            </div>
+                            <div class="facilities mb-3">
+                                <h6 class="mb-1">Services</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Petit déjeuner
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Accès à la piscine
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Wifi
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Climatisation
+                                </span>
+                            </div>
+                            <div class="guests">
+                                <h6 class="mb-1">Nombre de personnes</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    2 adultes
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    1 enfant
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
+                            <h6 class="mb-4">85€ / nuit</h6>
+                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
+                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4 border-0 shadow">
+                    <div class="row g-0 p-3 align-items-center">
+                        <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
+                            <img src="img/rooms/2.png" class="img-fluid rounded" style="height: 250px;">
+                        </div>
+                        <div class="col-md-5 px-lg-3 px-md-3 px-0">
+                            <h5 class="mb-1">Chambre Standard n°4</h5>
+                            <div class="features mb-3">
+                                <h6 class="mb-1">Caractéristiques</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    1 lit double
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Salle de bain
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Douche à l'italienne
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    20 m² 
+                                </span>
+                            </div>
+                            <div class="facilities mb-3">
+                                <h6 class="mb-1">Services</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Petit déjeuner
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Accès à la piscine
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Wifi
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Climatisation
+                                </span>
+                            </div>
+                            <div class="guests">
+                                <h6 class="mb-1">Nombre de personnes</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    2 adultes
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    1 enfant
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
+                            <h6 class="mb-4">85€ / nuit</h6>
+                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
+                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4 border-0 shadow">
+                    <div class="row g-0 p-3 align-items-center">
+                        <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
+                            <img src="img/rooms/2.png" class="img-fluid rounded" style="height: 250px;">
+                        </div>
+                        <div class="col-md-5 px-lg-3 px-md-3 px-0">
+                            <h5 class="mb-1">Chambre Standard n°5</h5>
+                            <div class="features mb-3">
+                                <h6 class="mb-1">Caractéristiques</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    1 lit double
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Salle de bain
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Douche à l'italienne
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    20 m² 
+                                </span>
+                            </div>
+                            <div class="facilities mb-3">
+                                <h6 class="mb-1">Services</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Petit déjeuner
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Accès à la piscine
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Wifi
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Climatisation
+                                </span>
+                            </div>
+                            <div class="guests">
+                                <h6 class="mb-1">Nombre de personnes</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    2 adultes
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    1 enfant
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
+                            <h6 class="mb-4">85€ / nuit</h6>
+                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
+                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4 border-0 shadow">
+                    <div class="row g-0 p-3 align-items-center">
+                        <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
+                            <img src="img/rooms/2.png" class="img-fluid rounded" style="height: 250px;">
+                        </div>
+                        <div class="col-md-5 px-lg-3 px-md-3 px-0">
+                            <h5 class="mb-1">Chambre Standard n°6</h5>
+                            <div class="features mb-3">
+                                <h6 class="mb-1">Caractéristiques</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    1 lit double
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Salle de bain
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Douche à l'italienne
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    20 m² 
+                                </span>
+                            </div>
+                            <div class="facilities mb-3">
+                                <h6 class="mb-1">Services</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Petit déjeuner
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Accès à la piscine
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Wifi
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Climatisation
+                                </span>
+                            </div>
+                            <div class="guests">
+                                <h6 class="mb-1">Nombre de personnes</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    2 adultes
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    1 enfant
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
+                            <h6 class="mb-4">85€ / nuit</h6>
+                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
+                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4 border-0 shadow">
+                    <div class="row g-0 p-3 align-items-center">
+                        <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
+                            <img src="img/rooms/1.png" class="img-fluid rounded" style="height: 250px;">
+                        </div>
+                        <div class="col-md-5 px-lg-3 px-md-3 px-0">
+                            <h5 class="mb-1">Chambre Confort n°11</h5>
+                            <div class="features mb-3">
+                                <h6 class="mb-1">Caractéristiques</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    2 lits doubles
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Salle de bain
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Douche à l'italienne
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    30 m² 
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Bureau
                                 </span>
                             </div>
                             <div class="facilities mb-3">
@@ -128,7 +455,7 @@
                             <img src="img/rooms/1.png" class="img-fluid rounded" style="height: 250px;">
                         </div>
                         <div class="col-md-5 px-lg-3 px-md-3 px-0">
-                            <h5 class="mb-1">Chambre Standard n°1</h5>
+                            <h5 class="mb-1">Chambre Confort n°12</h5>
                             <div class="features mb-3">
                                 <h6 class="mb-1">Caractéristiques</h6>
                                 <span class="badge rounded-pill bg-light text-dark text-wrap">
@@ -141,7 +468,10 @@
                                     Douche à l'italienne
                                 </span>
                                 <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                    20 m² 
+                                    30 m² 
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Bureau
                                 </span>
                             </div>
                             <div class="facilities mb-3">
@@ -172,7 +502,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="col-md-2 text-center">
+                        <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
                             <h6 class="mb-4">85€ / nuit</h6>
                             <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
                             <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
@@ -185,7 +515,7 @@
                             <img src="img/rooms/1.png" class="img-fluid rounded" style="height: 250px;">
                         </div>
                         <div class="col-md-5 px-lg-3 px-md-3 px-0">
-                            <h5 class="mb-1">Chambre Standard n°1</h5>
+                            <h5 class="mb-1">Chambre Confort n°13</h5>
                             <div class="features mb-3">
                                 <h6 class="mb-1">Caractéristiques</h6>
                                 <span class="badge rounded-pill bg-light text-dark text-wrap">
@@ -198,7 +528,10 @@
                                     Douche à l'italienne
                                 </span>
                                 <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                    20 m² 
+                                    30 m² 
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Bureau
                                 </span>
                             </div>
                             <div class="facilities mb-3">
@@ -229,7 +562,202 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="col-md-2 text-center">
+                        <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
+                            <h6 class="mb-4">85€ / nuit</h6>
+                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
+                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4 border-0 shadow">
+                    <div class="row g-0 p-3 align-items-center">
+                        <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
+                            <img src="img/rooms/1.png" class="img-fluid rounded" style="height: 250px;">
+                        </div>
+                        <div class="col-md-5 px-lg-3 px-md-3 px-0">
+                            <h5 class="mb-1">Chambre Confort n°14</h5>
+                            <div class="features mb-3">
+                                <h6 class="mb-1">Caractéristiques</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    1 lit double
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Salle de bain
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Douche à l'italienne
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    30 m² 
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Bureau
+                                </span>
+                            </div>
+                            <div class="facilities mb-3">
+                                <h6 class="mb-1">Services</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Petit déjeuner
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Accès à la piscine
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Wifi
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    TV
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Climatisation
+                                </span>
+                            </div>
+                            <div class="guests">
+                                <h6 class="mb-1">Nombre de personnes</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    2 adultes
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    1 enfant
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
+                            <h6 class="mb-4">85€ / nuit</h6>
+                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
+                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4 border-0 shadow">
+                    <div class="row g-0 p-3 align-items-center">
+                        <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
+                            <img src="img/rooms/3.png" class="img-fluid rounded" style="height: 250px;">
+                        </div>
+                        <div class="col-md-5 px-lg-3 px-md-3 px-0">
+                            <h5 class="mb-1">Chambre Premium n°21</h5>
+                            <div class="features mb-3">
+                                <h6 class="mb-1">Caractéristiques</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    2 lits doubles
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Salle de bain
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Douche à l'italienne ou baignoire
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    40 m² 
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Bureau
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Balcon
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Sofa
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Table de travail
+                                </span>
+                            </div>
+                            <div class="facilities mb-3">
+                                <h6 class="mb-1">Services</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Petit déjeuner en chambre
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Accès à la piscine
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Wifi
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    TV
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Climatisation
+                                </span>
+                            </div>
+                            <div class="guests">
+                                <h6 class="mb-1">Nombre de personnes</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    4 adultes
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    2 enfants
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
+                            <h6 class="mb-4">85€ / nuit</h6>
+                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
+                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4 border-0 shadow">
+                    <div class="row g-0 p-3 align-items-center">
+                        <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
+                            <img src="img/rooms/3.png" class="img-fluid rounded" style="height: 250px;">
+                        </div>
+                        <div class="col-md-5 px-lg-3 px-md-3 px-0">
+                            <h5 class="mb-1">Chambre Premium n°22</h5>
+                            <div class="features mb-3">
+                                <h6 class="mb-1">Caractéristiques</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    2 lits doubles
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Salle de bain
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Douche à l'italienne ou baignoire
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    40 m² 
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Balcon
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Sofa
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Table de travail
+                                </span>
+                            </div>
+                            <div class="facilities mb-3">
+                                <h6 class="mb-1">Services</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Petit déjeuner en chambre
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Accès à la piscine
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Wifi
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    TV
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    Climatisation
+                                </span>
+                            </div>
+                            <div class="guests">
+                                <h6 class="mb-1">Nombre de personnes</h6>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    4 adultes
+                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                    2 enfants
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
                             <h6 class="mb-4">85€ / nuit</h6>
                             <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
                             <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
@@ -237,11 +765,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-
-
     <?php require 'liens/footer.php'; ?>
 </body>
 </html>

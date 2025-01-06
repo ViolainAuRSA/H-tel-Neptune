@@ -2,5 +2,5 @@
 
     session_start();
 
-    include_once ('../../Database.php');
+    include_once ('../Database.php');
 ?>
