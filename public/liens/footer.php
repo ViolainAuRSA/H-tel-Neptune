@@ -1,9 +1,15 @@
+<?php
+    require_once '../Database.php';
+    $req = $DB->query("SELECT * FROM settings");
+    $settings = $req->fetch();
+?>
+
 <div class="container-fluid bg-white mt-5">
     <div class="row">
         <div class="col-lg-4 p-4">
             <h3 class="h-font fw-bold fs-3 mb-2">Hôtel Neptune</h3>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                <?php echo $settings['site_about']; ?>
             </p>
         </div>
         <div class="col-lg-4 p-4">
