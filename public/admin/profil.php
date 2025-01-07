@@ -14,9 +14,18 @@ if (isset($_POST['modifier'])) {
     $nom = htmlspecialchars($_POST['nom'], ENT_QUOTES, 'UTF-8');
     $email = htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8');
     $telephone = htmlspecialchars($_POST['telephone'], ENT_QUOTES, 'UTF-8');
+    $mot_de_passe = htmlspecialchars($_POST['mot_de_passe'], ENT_QUOTES, 'UTF-8');
 
-    $req = $DB->prepare("UPDATE users SET nom = ?, email = ?, telephone = ? WHERE id = ?");
-    $req->execute(array($nom, $email, $telephone, $id));
+    if (!empty($mot_de_passe)) {
+        // Hachage du mot de passe avant de le sauvegarder
+        $mot_de_passe_hache = password_hash($mot_de_passe, PASSWORD_DEFAULT);
+        $req = $DB->prepare("UPDATE users SET nom = ?, email = ?, telephone = ?, mot_de_passe = ? WHERE id = ?");
+        $req->execute(array($nom, $email, $telephone, $mot_de_passe_hache, $id));
+    } else {
+        // Si aucun mot de passe n'est fourni, ne pas modifier le mot de passe
+        $req = $DB->prepare("UPDATE users SET nom = ?, email = ?, telephone = ? WHERE id = ?");
+        $req->execute(array($nom, $email, $telephone, $id));
+    }
 
     $_SESSION['success_message'] = "Utilisateur modifié avec succès";
     header("Location: profil.php");
@@ -33,7 +42,6 @@ if (isset($_POST['supprimer'])) {
     header("Location: profil.php");
     exit();
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -133,6 +141,10 @@ if (isset($_POST['supprimer'])) {
                         <label class="form-label fw-bold">Téléphone</label>
                         <input type="text" name="telephone" id="modal_telephone" class="form-control shadow-none">
                     </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Nouveau mot de passe (laisser vide pour ne pas changer)</label>
+                        <input type="text" name="mot_de_passe" id="modal_mot_de_passe" class="form-control shadow-none">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn text-secondary shadow-none" data-bs-dismiss="modal">Annuler</button>
@@ -146,7 +158,6 @@ if (isset($_POST['supprimer'])) {
 <?php require 'liens/scripts.php'; ?>
 
 <script>
-    // Script pour remplir les champs de la modale avec les données de l'utilisateur sélectionné
     document.addEventListener('DOMContentLoaded', function () {
         const ProfilSettings = document.getElementById('ProfilSettings');
         ProfilSettings.addEventListener('show.bs.modal', function (event) {
@@ -160,6 +171,7 @@ if (isset($_POST['supprimer'])) {
             document.getElementById('modal_nom').value = nom;
             document.getElementById('modal_email').value = email;
             document.getElementById('modal_telephone').value = telephone;
+            document.getElementById('modal_mot_de_passe').value = ""; // Réinitialiser le champ mot de passe
         });
     });
 </script>
