@@ -31,11 +31,8 @@
                 $err_nom = "Le nom doit contenir moins de 25 caractères";
             }else{
                 $req = $DB->prepare("SELECT id FROM users WHERE nom = ?");
-
                 $req->execute(array($nom));
-
                 $req = $req->fetch();
-
                 if(isset($req['id'])){
                     $valid = false;
                     $err_nom = "Le nom est déjà utilisé";
@@ -95,53 +92,63 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription | Hôtel Neptune</title>
     <?php require 'liens/liens.php'; ?>
+    <style>
+        div.login-form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-light">
     <!-- Header -->
     <?php require_once 'liens/header.php'; ?>
 
-    <main class="main-content">
-        <div class="register-container">
-            <h1>Inscription</h1>
-            <form method="POST">
-                <div class="form-group">
-                    <label for="nom">Nom complet</label>
+    <div class="login-form text-center rounded bg-white shadow overflow-hidden">
+        <form method="POST">
+            <h4 class="bg-dark text-white py-3">Inscription</h4>
+            <div class="p-4">
+                <div class="mb-3">
+                    <label for="nom">Nom complet</label><br>
                     <input type="text" id="name" name="nom" placeholder="Nom complet" value="<?php if(isset($nom)) echo $nom; ?>">
                     <?php if(isset($err_nom)) echo $err_nom; ?>
                 </div>
-                <div class="form-group">
-                    <label for="mail">Email</label>
+                <div class="mb-3">
+                    <label for="mail">Email</label><br>
                     <input type="email" id="mail" name="mail" placeholder="mail@exemple.com" value="<?php if(isset($mail)) echo $mail; ?>">
                     <?php if(isset($err_mail)) echo $err_mail; ?>
                 </div>
-                <div class="form-group">
-                    <label for="confmail">Confirmation de l'email</label>
+                <div class="mb-3">
+                    <label for="confmail">Confirmation de l'email</label><br>
                     <input type="email" id="confmail" name="confmail" placeholder="mail@exemple.com" value="<?php if(isset($confmail)) echo $confmail; ?>">
                     <?php if(isset($err_confmail)) echo $err_confmail; ?>
                 </div>
-                <div class="form-group">
-                    <label for="telephone">Telephone</label>
+                <div class="mb-3">
+                    <label for="telephone">Téléphone</label><br>
                     <input type="tel" id="telephone" name="telephone" placeholder="06 06 06 06 06" value="<?php if(isset($telephone)) echo $telephone; ?>">
                 </div>
-                <div class="form-group">
-                    <label for="password">Mot de passe</label>
+                <div class="mb-3">
+                    <label for="password">Mot de passe</label><br>
                     <input type="password" id="password" name="password" placeholder="Mot de passe" value="<?php if(isset($password)) echo $password; ?>">
                     <?php if(isset($err_password)) echo $err_password; ?>
                 </div>
-
-                <div class="form-group">
-                    <label for="confpassword">Confirmation du mot de passe</label>
+                <div class="mb-4">
+                    <label for="confpassword">Confirmation du mot de passe</label><br>
                     <input type="password" id="confpassword" name="confpassword" placeholder="Mot de passe">
                     <?php if(isset($err_confpassword)) echo $err_confpassword; ?>
                 </div>
-                <button type="submit" class="submit-btn" name="register">S'inscrire</button>
-            </form>
-            <p class="register-link">Déjà inscrit ? <a href="login.php">Connectez-vous ici</a></p>
-        </div>
+                <button name="register" type="submit" class="btn text-white custom-bg shadow-none">S'inscrire</button>
+            </div>
+            <div class="register-link">
+                <p>Déjà inscrit ? <a href="login.php">Connectez-vous ici</a></p>
+            </div>
+        </form>
     </div>
-
-    <?php require_once 'footer/footer.php'; ?>
 </body>
-</html> 
+</html>

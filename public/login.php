@@ -79,34 +79,38 @@
 <head>
     <title>Connexion | Sablier Tranquille</title>
     <?php require 'liens/liens.php'; ?>
+    <style>
+        div.login-form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+        }
+    </style>
 </head>
-<body>
-    <!-- Header -->
+<body class="bg-light">
     <?php require 'liens/header.php'; ?>
-
-    <main class="main-content">
-        <div class="login-container">
-            <h1>Connexion</h1>
-            <form method="POST">
-                <div class="form-group">
-                    <label for="mail">Email</label>
+    <div class="login-form text-center rounded bg-white shadow overflow-hidden">
+        <form method="POST">
+            <h4 class="bg-dark text-white py-3">Connexion</h4>
+            <div class="p-4">
+                <div class="mb-3">
+                <label for="mail">Email</label>
                     <input type="email" id="mail" name="mail" placeholder="mail@exemple.com" value="<?php if(isset($mail)) echo $mail; ?>">
                     <?php if(isset($err_mail)) echo $err_mail; ?>
                 </div>
-                <div class="form-group">
-                    <label for="password">Mot de passe</label>
+                <div class="mb-4">
+                <label for="password">Mot de passe</label>
                     <input type="password" id="password" name="password" placeholder="Mot de passe" value="<?php if(isset($password)) echo $password; ?>">
                     <?php if(isset($err_password)) echo $err_password; ?>
                 </div>
-                <button type="submit" class="submit-btn" name="register">Se connecter</button>
-            </form>
-            <div class="register-link">
-                <p>Pas encore de compte ? <a href="register.php">S'inscrire</a></p>
+                <button name="register" type="submit" class="btn text-white custom-bg shadow-none">Connexion</button>
             </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <?php require 'liens/footer.php'; ?>
+            <div class="register-link">
+                <p>Pas encore de compte ? <a href="register.php"> S'inscrire</a></p>
+            </div>
+        </form>
+    </div>
 </body>
 </html> 

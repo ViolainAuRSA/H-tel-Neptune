@@ -27,7 +27,7 @@
                             Mon profil
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="profil.php">Mon Profil</a></li>
+                            <li><a class="dropdown-item" href="#">Mon Profil</a></li>
                             <li><a class="dropdown-item" href="#">Mes réservations</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="logout.php">Déconnexion</a></li>
@@ -35,9 +35,9 @@
                     </li>
                 </ul>
                 <div class="d-flex">
-                    <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    <a href="login.php" type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2">
                         Connexion
-                    </button>
+                    </a>
                     <a href="register.php" class="btn btn-outline-dark shadow-none me-lg-9 me-2">
                         Inscription
                     </a>
