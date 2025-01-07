@@ -28,7 +28,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="profil.php">Mon Profil</a></li>
-                            <li><a class="dropdown-item" href="#">Mes réservations</a></li>
+                            <li><a class="dropdown-item" href="mes_resa.php">Mes réservations</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="logout.php">Déconnexion</a></li>
                         </ul>

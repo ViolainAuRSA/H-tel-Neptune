@@ -1,11 +1,32 @@
 <?php
-
 require_once 'include.php';
 
 $caracteristiques = $DB->query("SELECT * FROM caracteristiques");
 $caracteristiques = $caracteristiques->fetchAll();
 
+// Initialisation des variables
+$date_arrivee = isset($_POST['date_arrivee']) ? $_POST['date_arrivee'] : '';
+$date_depart = isset($_POST['date_depart']) ? $_POST['date_depart'] : '';
+$message = '';
 
+// Vérification de la réservation
+if (isset($_POST['reserve1'])) {
+    if (!empty($date_arrivee) && !empty($date_depart)) {
+        $room_1 = 1; // Numéro de chambre (exemple: chambre 1)
+
+        // Insertion des données dans la BDD
+        $req = $DB->prepare("UPDATE users SET room_1 = :room, date_arrivee = :date_arrivee, date_depart = :date_depart");
+        $req->execute([
+            ':room' => $room_1,
+            ':date_arrivee' => $date_arrivee,
+            ':date_depart' => $date_depart
+        ]);
+
+        $message = "La réservation a été enregistrée avec succès.";
+    } else {
+        $message = "Veuillez renseigner une date d'arrivée et une date de départ.";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -24,51 +45,27 @@ $caracteristiques = $caracteristiques->fetchAll();
 
     <div class="container">
         <div class="row">
-
             <div class="col-lg-3 col-md-12 mb-lg-0 mb-4 px-lg-0">
                 <nav class="navbar navbar-expand-lg navbar-light bg-white rounded shadow">
                     <div class="container-fluid flex-lg-column align-items-stretch">
-                        <h4 class="mt-2">Filtres</h4>
-                        <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#filterDropdown" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse flex-column align-items-stretch mt-2" id="filterDropdown">
-                            <div class="border bg-light p-3 rounded mb-3">
-                                <h5 class="mb-3" style="font-size: 18px;">Vérifier les disponibilités</h5>
-                                <label class="form-label">Date d'arrivée</label>
-                                <input type="date" class="form-control shadow-none mb-3">
-                                <label class="form-label">Date de départ</label>
-                                <input type="date" class="form-control shadow-none mb-3">
-                            </div>
-                            <div class="border bg-light p-3 rounded mb-3">
-                                <h5 class="mb-3" style="font-size: 18px;">Options</h5>
-                                <div class="mb-2">
-                                    <input type="checkbox" id="f1" class="form-check-input shadow-none me-1">
-                                    <label class="form-check-label" for="f1">Télévision</label>
+                        <form method="POST">
+                            <h4 class="mt-2">Filtres</h4>
+                            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#filterDropdown" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse flex-column align-items-stretch mt-2" id="filterDropdown">
+                                <div class="border bg-light p-3 rounded mb-3">
+                                    <h5 class="mb-3" style="font-size: 18px;">Vérifier les disponibilités</h5>
+                                    <label class="form-label">Date d'arrivée</label>
+                                    <input type="date" class="form-control shadow-none mb-3" name="date_arrivee" value="<?php echo htmlspecialchars($date_arrivee); ?>">
+                                    <label class="form-label">Date de départ</label>
+                                    <input type="date" class="form-control shadow-none mb-3" name="date_depart" value="<?php echo htmlspecialchars($date_depart); ?>">
                                 </div>
-                                <div class="mb-2">
-                                    <input type="checkbox" id="f2" class="form-check-input shadow-none me-1">
-                                    <label class="form-check-label" for="f2">Service de chambre</label>
-                                </div>
-                                <div class="mb-2">
-                                    <input type="checkbox" id="f3" class="form-check-input shadow-none me-1">
-                                    <label class="form-check-label" for="f3">Balcon</label>
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" name="filter" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Filtrer</button>
                                 </div>
                             </div>
-                            <div class="border bg-light p-3 rounded mb-3">
-                                <h5 class="mb-3" style="font-size: 18px;">Nombre de personnes</h5>
-                                <div class="d-flex">
-                                    <div class="me-3">
-                                        <label class="form-label">Nombre d'adultes</label>
-                                        <input type="number" class="form-control shadow-none mb-3">
-                                    </div>
-                                    <div>
-                                        <label class="form-label">Nombre d'enfants</label>
-                                        <input type="number" class="form-control shadow-none mb-3">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </nav>
             </div>
@@ -100,36 +97,33 @@ $caracteristiques = $caracteristiques->fetchAll();
                             </div>
                             <div class="facilities mb-3">
                                 <h6 class="mb-1">Services</h6>
-                                <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                    Petit déjeuner
-                                </span>
-                                <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                    Accès à la piscine
-                                </span>
-                                <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                    Wifi
-                                </span>
-                                <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                    Climatisation
-                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">Petit déjeuner</span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">Accès à la piscine</span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">Wifi</span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">Climatisation</span>
                             </div>
                             <div class="guests">
                                 <h6 class="mb-1">Nombre de personnes</h6>
-                                <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                    2 adultes
-                                </span>
-                                <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                    1 enfant
-                                </span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">2 adultes</span>
+                                <span class="badge rounded-pill bg-light text-dark text-wrap">1 enfant</span>
                             </div>
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
                             <h6 class="mb-4">85€ / nuit</h6>
-                            <a href="" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
-                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                            <form method="POST">
+                                <input type="hidden" name="date_arrivee" value="<?php echo htmlspecialchars($date_arrivee); ?>">
+                                <input type="hidden" name="date_depart" value="<?php echo htmlspecialchars($date_depart); ?>">
+                                <button type="submit" name="reserve1" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</button>
+                            </form>
                         </div>
                     </div>
                 </div>
+                <?php if (!empty($message)) : ?>
+                    <div class="alert alert-info text-center"><?php echo $message; ?></div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
                 <div class="card mb-4 border-0 shadow">
                     <div class="row g-0 p-3 align-items-center">
                         <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
@@ -778,6 +772,23 @@ $caracteristiques = $caracteristiques->fetchAll();
             </div>
         </div>
     </div>
+    <script>
+        function validateDates() {
+            const dateArrivee = document.getElementById('date_arrivee').value;
+            const dateDepart = document.getElementById('date_depart').value;
+
+            if (!dateArrivee || !dateDepart) {
+                alert('Veuillez remplir les dates d\'arrivée et de départ.');
+                return false;
+            }
+
+            // Passer les valeurs des champs visibles aux champs cachés
+            document.getElementById('hidden_date_arrivee').value = dateArrivee;
+            document.getElementById('hidden_date_depart').value = dateDepart;
+
+            return true;
+        }
+    </script>
     <?php require 'liens/footer.php'; ?>
 </body>
 </html>
