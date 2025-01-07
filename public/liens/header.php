@@ -94,15 +94,15 @@
                         <div class="row">
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Nom</label>
-                                <input type="text" class="form-control shadow-none">
+                                <input type="text" class="form-control shadow-none" required>
                             </div>
                             <div class="col-md-6 p-0 mb-3">
                                 <label class="form-label">Adresse e-mail</label>
-                                <input type="email" class="form-control shadow-none">
+                                <input type="email" class="form-control shadow-none" required>
                             </div>
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Téléphone</label>
-                                <input type="number" class="form-control shadow-none">
+                                <input type="number" class="form-control shadow-none" required>
                             </div>
                             <div class="col-md-6 p-0 mb-3">
                                 <label class="form-label">Photo de profil</label>
@@ -110,23 +110,23 @@
                             </div>
                             <div class="col-md-12 p-0 mb-3">
                                 <label class="form-label">Adresse</label>
-                                <textarea class="form-control shadow-none" rows="1"></textarea>
+                                <textarea class="form-control shadow-none" rows="1" required></textarea>
                             </div>
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Code postal</label>
-                                <input type="number" class="form-control shadow-none">
+                                <input type="number" class="form-control shadow-none" required>
                             </div>
                             <div class="col-md-6 p-0 mb-3">
                                 <label class="form-label">Date de naissance</label>
-                                <input type="date" class="form-control shadow-none">
+                                <input type="date" class="form-control shadow-none" required>
                             </div>
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Mot de passe</label>
-                                <input type="password" class="form-control shadow-none">
+                                <input type="password" class="form-control shadow-none" required>
                             </div>
                              <div class="col-md-6 p-0 mb-3">
                                 <label class="form-label">Confirmation du mot de passe</label>
-                                <input type="password" class="form-control shadow-none">
+                                <input type="password" class="form-control shadow-none" required>
                             </div>
                         </div>
                     </div>
