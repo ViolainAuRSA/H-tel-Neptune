@@ -24,10 +24,10 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Mon Profil
+                            Mon profil
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Mon Profil</a></li>
+                            <li><a class="dropdown-item" href="profil.php">Mon Profil</a></li>
                             <li><a class="dropdown-item" href="#">Mes réservations</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="logout.php">Déconnexion</a></li>
@@ -38,9 +38,10 @@
                     <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
                         Connexion
                     </button>
-                    <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#signupModal">
+                    <a href="register.php" class="btn btn-outline-dark shadow-none me-lg-9 me-2">
                         Inscription
-                    </button>
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -59,79 +60,15 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label class="form-label">Email</label>
-                        <input type="email" class="form-control shadow-none">
+                        <input type="email" class="form-control shadow-none" name="email" required>
                     </div>
                     <div class="mb-4">
                         <label class="form-label">Mot de passe</label>
-                        <input type="password" class="form-control shadow-none">
+                        <input type="password" class="form-control shadow-none" name="mot_de_passe" required>
                     </div>
                     <div class="d-flex align-items-center justify-content-between mb-2">
-                        <button type="submit" class="btn btn-dark shadow-none">Connexion</button>
+                        <button type="submit" name="login" class="btn btn-dark shadow-none">Connexion</button>
                         <a href="javascript:void(0)" class="text-secondary text-decoration-none">Mot de passe oublié ?</a>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-    <!-- Modal Inscription -->
-<div class="modal fade" id="signupModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <form> 
-                <div class="modal-header">
-                    <h5 class="modal-title d-flex align-items-center">
-                        <i class="bi bi-person-lines-fill fs-3 me-2"></i>Inscription
-                    </h5>
-                    <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base ">
-                        Note : Vos coordonnées doivent correspondre à votre identité (carte d'identité, permis de conduire, carte grise, etc.)
-                        Ces informations sont nécessaires lors de l'enregistrement.
-                    </span>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-6 ps-0 mb-3">
-                                <label class="form-label">Nom</label>
-                                <input type="text" class="form-control shadow-none" required>
-                            </div>
-                            <div class="col-md-6 p-0 mb-3">
-                                <label class="form-label">Adresse e-mail</label>
-                                <input type="email" class="form-control shadow-none" required>
-                            </div>
-                            <div class="col-md-6 ps-0 mb-3">
-                                <label class="form-label">Téléphone</label>
-                                <input type="number" class="form-control shadow-none" required>
-                            </div>
-                            <div class="col-md-6 p-0 mb-3">
-                                <label class="form-label">Photo de profil</label>
-                                <input type="file" class="form-control shadow-none">
-                            </div>
-                            <div class="col-md-12 p-0 mb-3">
-                                <label class="form-label">Adresse</label>
-                                <textarea class="form-control shadow-none" rows="1" required></textarea>
-                            </div>
-                            <div class="col-md-6 ps-0 mb-3">
-                                <label class="form-label">Code postal</label>
-                                <input type="number" class="form-control shadow-none" required>
-                            </div>
-                            <div class="col-md-6 p-0 mb-3">
-                                <label class="form-label">Date de naissance</label>
-                                <input type="date" class="form-control shadow-none" required>
-                            </div>
-                            <div class="col-md-6 ps-0 mb-3">
-                                <label class="form-label">Mot de passe</label>
-                                <input type="password" class="form-control shadow-none" required>
-                            </div>
-                             <div class="col-md-6 p-0 mb-3">
-                                <label class="form-label">Confirmation du mot de passe</label>
-                                <input type="password" class="form-control shadow-none" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center my-1">
-                        <button type="submit" class="btn btn-dark shadow-none">Inscription</button>
                     </div>
                 </div>
             </form>

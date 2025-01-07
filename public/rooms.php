@@ -1,3 +1,12 @@
+<?php
+
+require_once 'include.php';
+
+$caracteristiques = $DB->query("SELECT * FROM caracteristiques");
+$caracteristiques = $caracteristiques->fetchAll();
+
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -74,18 +83,20 @@
                             <h5 class="mb-1">Chambre Standard n°1</h5>
                             <div class="features mb-3">
                                 <h6 class="mb-1">Caractéristiques</h6>
-                                <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                    1 lit double
-                                </span>
-                                <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                    Salle de bain
-                                </span>
-                                <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                    Douche à l'italienne
-                                </span>
-                                <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                    20 m² 
-                                </span>
+                                <?php 
+                                    echo "<span class='badge rounded-pill bg-light text-dark text-wrap'>";
+                                    echo $caracteristiques[1]['nom'];
+                                    echo "</span>";
+                                    echo "<span class='badge rounded-pill bg-light text-dark text-wrap'>";
+                                    echo $caracteristiques[5]['nom'];
+                                    echo "</span>";
+                                    echo "<span class='badge rounded-pill bg-light text-dark text-wrap'>";
+                                    echo $caracteristiques[6]['nom'];
+                                    echo "</span>";
+                                    echo "<span class='badge rounded-pill bg-light text-dark text-wrap'>";
+                                    echo $caracteristiques[7]['nom'];
+                                    echo "</span>";
+                                ?>
                             </div>
                             <div class="facilities mb-3">
                                 <h6 class="mb-1">Services</h6>

@@ -43,6 +43,9 @@
                         <a class="nav-link text-white" href="rooms.php">Gestion des chambres</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-white" href="services.php">Gestion des services</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-white" href="demande_user.php">Demandes utilisateurs</a>
                     </li>   
                     <li class="nav-item">

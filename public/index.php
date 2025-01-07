@@ -296,8 +296,8 @@ require_once 'include.php';
                 <h5 class="mt-3">Wifi</h5>
             </div>
             <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="img/features/star.svg" width="80px">
-                <h5 class="mt-3">Etoiles</h5>
+                <img src="img/features/parking.svg" width="80px">
+                <h5 class="mt-3">Parking</h5>
             </div>
             <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
                 <img src="img/features/tv.svg" width="80px">
