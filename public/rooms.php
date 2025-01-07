@@ -125,7 +125,7 @@ $caracteristiques = $caracteristiques->fetchAll();
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
                             <h6 class="mb-4">85€ / nuit</h6>
-                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
+                            <a href="" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
                             <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
                         </div>
                     </div>

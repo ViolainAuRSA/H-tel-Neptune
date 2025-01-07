@@ -93,13 +93,30 @@ $service = $service->fetchAll();
 
                 <div class="modal-footer">
                     <button type="button" class="btn text-secondary shadow-none" data-bs-dismiss="modal">Annuler</button>
-                    <button type="submit1" name="submit1" class="btn custom-bg text-white shadow-none">Enregistrer</button>
+                    <button type="submit" name="submit" class="btn custom-bg text-white shadow-none">Enregistrer</button>
                 </div>
 
             </div>
         </form>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const serviceForm = document.getElementById('serviceForm');
+        serviceForm.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            const id = button.getAttribute('data-id');
+            const nom = button.getAttribute('data-nom');
+            const icon = button.getAttribute('data-icon');
+
+            document.getElementById('modal_id').value = id;
+            document.getElementById('modal_nom').value = nom;
+            document.getElementById('modal_icon').value = icon;
+        });
+    });
+</script>
+
 
 <?php require 'liens/scripts.php'; ?>
 </body>
