@@ -49,6 +49,9 @@
                         <a class="nav-link text-white" href="profil.php">Gestion des utilisateurs</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-white" href="mes_resa.php">Gestion des réservations</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-white" href="demande_user.php">Demandes utilisateurs</a>
                     </li>   
                     <li class="nav-item">

@@ -1,17 +1,17 @@
 <?php
-require_once 'include.php';
-    $req = $DB->query("SELECT * FROM contact_details");
-    $contact_details = $req->fetch();
-    
-    $adresse = $contact_details['adresse'];
-    $gmap = $contact_details['gmap'];
-    $telephone = $contact_details['telephone'];
-    $email = $contact_details['email'];
-    $facebook = $contact_details['facebook'];
-    $insta = $contact_details['insta'];
-    $twitter = $contact_details['twitter'];
-    $linkedin = $contact_details['linkedin'];
-    $pinterest = $contact_details['pinterest'];
+    require_once 'include.php';
+        $req = $DB->query("SELECT * FROM contact_details");
+        $contact_details = $req->fetch();
+        
+        $adresse = $contact_details['adresse'];
+        $gmap = $contact_details['gmap'];
+        $telephone = $contact_details['telephone'];
+        $email = $contact_details['email'];
+        $facebook = $contact_details['facebook'];
+        $insta = $contact_details['insta'];
+        $twitter = $contact_details['twitter'];
+        $linkedin = $contact_details['linkedin'];
+        $pinterest = $contact_details['pinterest'];
 ?>
 
 <!DOCTYPE html>
@@ -53,12 +53,12 @@ require_once 'include.php';
     </div>
 
     <!-- Check availability form -->
-     <div class="container availability-form">
+     <div class="container availability-form d-flex align-items-center justify-content-center">
         <div class="row">
             <div class="col-lg-12 bg-white shadow p-4 rounded">
                 <h5 class="mb-4">Vérifier la disponibilité</h5>
                 <form>
-                    <div class="row align-items-end">
+                    <div class="row align-items-end justify-content-center">
                         <div class="col-lg-3 mb-3">
                             <label class="form-label" style="font-weight: 500;">Arrivée</label>
                             <input type="date" class="form-control shadow-none">
@@ -67,26 +67,8 @@ require_once 'include.php';
                             <label class="form-label" style="font-weight: 500;">Départ</label>
                             <input type="date" class="form-control shadow-none">
                         </div>
-                        <div class="col-lg-3 mb-3">
-                            <label class="form-label" style="font-weight: 500;">Nombre d'adultes</label>
-                            <select class="form-select shadow-none">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                </select>
-                        </div>
-                        <div class="col-lg-2 mb-3">
-                            <label class="form-label" style="font-weight: 500;">Nombre d'enfants</label>
-                            <select class="form-select shadow-none">
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
                         <div class="col-lg-1 mb-lg-3 mt-2">
-                            <button type="submit" class="btn custom-bg text-white shadow-none">Vérifier</button>
+                            <a href="rooms.php" class="btn custom-bg text-white shadow-none">Vérifier</a>
                         </div>
                     </div>
                 </form>
@@ -145,8 +127,7 @@ require_once 'include.php';
                             </span>
                         </div>
                         <div class="d-flex justify-content-evenly mb-2">
-                            <a href="#" class="btn btn-sm custom-bg text-white shadow-none">Réserver maintenant</a>
-                            <a href="#" class="btn btn-sm btn-outline-dark shadow-none">Plus d'informations</a>
+                            <a href="rooms.php" class="btn btn-sm btn-outline-dark shadow-none">Plus d'informations</a>
                         </div>
                     </div>
                 </div>
@@ -205,8 +186,7 @@ require_once 'include.php';
                             </span>
                         </div>
                         <div class="d-flex justify-content-evenly mb-2">
-                            <a href="#" class="btn btn-sm custom-bg text-white shadow-none">Réserver maintenant</a>
-                            <a href="#" class="btn btn-sm btn-outline-dark shadow-none">Plus d'informations</a>
+                            <a href="rooms.php" class="btn btn-sm btn-outline-dark shadow-none">Plus d'informations</a>
                         </div>
                     </div>
                 </div>
@@ -274,8 +254,7 @@ require_once 'include.php';
                             </span>
                         </div>
                         <div class="d-flex justify-content-evenly mb-2">
-                            <a href="#" class="btn btn-sm custom-bg text-white shadow-none">Réserver maintenant</a>
-                            <a href="#" class="btn btn-sm btn-outline-dark shadow-none">Plus d'informations</a>
+                            <a href="rooms.php" class="btn btn-sm btn-outline-dark shadow-none">Plus d'informations</a>
                         </div>
                     </div>
                 </div>
@@ -288,7 +267,6 @@ require_once 'include.php';
 
     <!-- Nos services -->
     <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Nos Services</h2>
-
     <div class="container">
         <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
             <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
@@ -387,7 +365,6 @@ require_once 'include.php';
 
     <!-- Contact -->
     <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Contactez-nous</h2>
-
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded">

@@ -9,23 +9,66 @@ $date_arrivee = isset($_POST['date_arrivee']) ? $_POST['date_arrivee'] : '';
 $date_depart = isset($_POST['date_depart']) ? $_POST['date_depart'] : '';
 $message = '';
 
-// Vérification de la réservation
-if (isset($_POST['reserve1'])) {
-    if (!empty($date_arrivee) && !empty($date_depart)) {
-        $room_1 = 1; // Numéro de chambre (exemple: chambre 1)
+$req = $DB->prepare("SELECT * FROM users WHERE id = ?");
+$req->execute(array($_SESSION['id']));
+$user = $req->fetch();
 
-        // Insertion des données dans la BDD
-        $req = $DB->prepare("UPDATE users SET room_1 = :room, date_arrivee = :date_arrivee, date_depart = :date_depart");
-        $req->execute([
-            ':room' => $room_1,
-            ':date_arrivee' => $date_arrivee,
-            ':date_depart' => $date_depart
-        ]);
-
-        $message = "La réservation a été enregistrée avec succès.";
-    } else {
-        $message = "Veuillez renseigner une date d'arrivée et une date de départ.";
+if($user['room_1'] == 0 && $user['room_2'] == 0 && $user['room_3'] == 0){
+    if (isset($_POST['reserve1'])) {
+        if (!empty($date_arrivee) && !empty($date_depart)) {
+            $room_1 = 1; // Numéro de chambre (exemple: chambre 1)
+    
+            // Insertion des données dans la BDD
+            $req = $DB->prepare("UPDATE users SET room_1 = :room, date_arrivee = :date_arrivee, date_depart = :date_depart");
+            $req->execute([
+                ':room' => $room_1,
+                ':date_arrivee' => $date_arrivee,
+                ':date_depart' => $date_depart
+            ]);
+    
+            $message = "La réservation a été enregistrée avec succès.";
+        } else {
+            $message = "Veuillez renseigner une date d'arrivée et une date de départ.";
+        }
     }
+    if (isset($_POST['reserve2'])) {
+        if (!empty($date_arrivee) && !empty($date_depart)) {
+            $room_2 = 1; // Numéro de chambre (exemple: chambre 1)
+    
+            // Insertion des données dans la BDD
+            $req = $DB->prepare("UPDATE users SET room_2 = :room, date_arrivee = :date_arrivee, date_depart = :date_depart");
+            $req->execute([
+                ':room' => $room_2,
+                ':date_arrivee' => $date_arrivee,
+                ':date_depart' => $date_depart
+            ]);
+    
+            $message = "La réservation a été enregistrée avec succès.";
+        } else {
+            $message = "Veuillez renseigner une date d'arrivée et une date de départ.";
+        }
+    }
+    
+    if (isset($_POST['reserve3'])) {
+        if (!empty($date_arrivee) && !empty($date_depart)) {
+            $room_3 = 1; // Numéro de chambre (exemple: chambre 1)
+    
+            // Insertion des données dans la BDD
+            $req = $DB->prepare("UPDATE users SET room_3 = :room, date_arrivee = :date_arrivee, date_depart = :date_depart");
+            $req->execute([
+                ':room' => $room_3,
+                ':date_arrivee' => $date_arrivee,
+                ':date_depart' => $date_depart
+            ]);
+    
+            $message = "La réservation a été enregistrée avec succès.";
+        } else {
+            $message = "Veuillez renseigner une date d'arrivée et une date de départ.";
+        }
+    }
+}
+else {
+    $message = "Vous avez déjà réservé une chambre.";
 }
 ?>
 <!DOCTYPE html>
@@ -57,9 +100,10 @@ if (isset($_POST['reserve1'])) {
                                 <div class="border bg-light p-3 rounded mb-3">
                                     <h5 class="mb-3" style="font-size: 18px;">Vérifier les disponibilités</h5>
                                     <label class="form-label">Date d'arrivée</label>
-                                    <input type="date" class="form-control shadow-none mb-3" name="date_arrivee" value="<?php echo htmlspecialchars($date_arrivee); ?>">
+                                    <input type="date" class="form-control shadow-none mb-3" name="date_arrivee" id="date_arrivee">
+                                    
                                     <label class="form-label">Date de départ</label>
-                                    <input type="date" class="form-control shadow-none mb-3" name="date_depart" value="<?php echo htmlspecialchars($date_depart); ?>">
+                                    <input type="date" class="form-control shadow-none mb-3" name="date_depart" id="date_depart">
                                 </div>
                                 <div class="d-flex justify-content-center">
                                     <button type="submit" name="filter" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Filtrer</button>
@@ -71,6 +115,9 @@ if (isset($_POST['reserve1'])) {
             </div>
 
             <div class="col-lg-9 col-md-12 px-4">
+            <?php if (!empty($message)) : ?>
+                    <div class="alert alert-info text-center"><?php echo $message; ?></div>
+                <?php endif; ?>
                 <div class="card mb-4 border-0 shadow">
                     <div class="row g-0 p-3 align-items-center">
                         <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
@@ -118,12 +165,6 @@ if (isset($_POST['reserve1'])) {
                         </div>
                     </div>
                 </div>
-                <?php if (!empty($message)) : ?>
-                    <div class="alert alert-info text-center"><?php echo $message; ?></div>
-                <?php endif; ?>
-            </div>
-        </div>
-    </div>
                 <div class="card mb-4 border-0 shadow">
                     <div class="row g-0 p-3 align-items-center">
                         <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
@@ -173,8 +214,11 @@ if (isset($_POST['reserve1'])) {
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
                             <h6 class="mb-4">85€ / nuit</h6>
-                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
-                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                            <form method="POST">
+                                <input type="hidden" name="date_arrivee" value="<?php echo htmlspecialchars($date_arrivee); ?>">
+                                <input type="hidden" name="date_depart" value="<?php echo htmlspecialchars($date_depart); ?>">
+                                <button type="submit" name="reserve1" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -227,8 +271,11 @@ if (isset($_POST['reserve1'])) {
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
                             <h6 class="mb-4">85€ / nuit</h6>
-                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
-                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                            <form method="POST">
+                                <input type="hidden" name="date_arrivee" value="<?php echo htmlspecialchars($date_arrivee); ?>">
+                                <input type="hidden" name="date_depart" value="<?php echo htmlspecialchars($date_depart); ?>">
+                                <button type="submit" name="reserve1" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -281,8 +328,11 @@ if (isset($_POST['reserve1'])) {
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
                             <h6 class="mb-4">85€ / nuit</h6>
-                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
-                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                            <form method="POST">
+                                <input type="hidden" name="date_arrivee" value="<?php echo htmlspecialchars($date_arrivee); ?>">
+                                <input type="hidden" name="date_depart" value="<?php echo htmlspecialchars($date_depart); ?>">
+                                <button type="submit" name="reserve1" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -335,8 +385,11 @@ if (isset($_POST['reserve1'])) {
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
                             <h6 class="mb-4">85€ / nuit</h6>
-                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
-                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                            <form method="POST">
+                                <input type="hidden" name="date_arrivee" value="<?php echo htmlspecialchars($date_arrivee); ?>">
+                                <input type="hidden" name="date_depart" value="<?php echo htmlspecialchars($date_depart); ?>">
+                                <button type="submit" name="reserve1" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -389,8 +442,11 @@ if (isset($_POST['reserve1'])) {
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
                             <h6 class="mb-4">85€ / nuit</h6>
-                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
-                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                            <form method="POST">
+                                <input type="hidden" name="date_arrivee" value="<?php echo htmlspecialchars($date_arrivee); ?>">
+                                <input type="hidden" name="date_depart" value="<?php echo htmlspecialchars($date_depart); ?>">
+                                <button type="submit" name="reserve1" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -448,9 +504,12 @@ if (isset($_POST['reserve1'])) {
                             </div>
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
-                            <h6 class="mb-4">85€ / nuit</h6>
-                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
-                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                            <h6 class="mb-4">100€ / nuit</h6>
+                            <form method="POST">
+                                <input type="hidden" name="date_arrivee" value="<?php echo htmlspecialchars($date_arrivee); ?>">
+                                <input type="hidden" name="date_depart" value="<?php echo htmlspecialchars($date_depart); ?>">
+                                <button type="submit" name="reserve2" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -508,9 +567,12 @@ if (isset($_POST['reserve1'])) {
                             </div>
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
-                            <h6 class="mb-4">85€ / nuit</h6>
-                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
-                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                        <h6 class="mb-4">100€ / nuit</h6>
+                            <form method="POST">
+                                <input type="hidden" name="date_arrivee" value="<?php echo htmlspecialchars($date_arrivee); ?>">
+                                <input type="hidden" name="date_depart" value="<?php echo htmlspecialchars($date_depart); ?>">
+                                <button type="submit" name="reserve2" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -568,9 +630,12 @@ if (isset($_POST['reserve1'])) {
                             </div>
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
-                            <h6 class="mb-4">85€ / nuit</h6>
-                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
-                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                            <h6 class="mb-4">100€ / nuit</h6>
+                            <form method="POST">
+                                <input type="hidden" name="date_arrivee" value="<?php echo htmlspecialchars($date_arrivee); ?>">
+                                <input type="hidden" name="date_depart" value="<?php echo htmlspecialchars($date_depart); ?>">
+                                <button type="submit" name="reserve2" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -628,9 +693,12 @@ if (isset($_POST['reserve1'])) {
                             </div>
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
-                            <h6 class="mb-4">85€ / nuit</h6>
-                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
-                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                            <h6 class="mb-4">100€ / nuit</h6>
+                            <form method="POST">
+                                <input type="hidden" name="date_arrivee" value="<?php echo htmlspecialchars($date_arrivee); ?>">
+                                <input type="hidden" name="date_depart" value="<?php echo htmlspecialchars($date_depart); ?>">
+                                <button type="submit" name="reserve2" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -697,9 +765,12 @@ if (isset($_POST['reserve1'])) {
                             </div>
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
-                            <h6 class="mb-4">85€ / nuit</h6>
-                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
-                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                            <h6 class="mb-4">120€ / nuit</h6>
+                            <form method="POST">
+                                <input type="hidden" name="date_arrivee" value="<?php echo htmlspecialchars($date_arrivee); ?>">
+                                <input type="hidden" name="date_depart" value="<?php echo htmlspecialchars($date_depart); ?>">
+                                <button type="submit" name="reserve3" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -763,9 +834,12 @@ if (isset($_POST['reserve1'])) {
                             </div>
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
-                            <h6 class="mb-4">85€ / nuit</h6>
-                            <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</a>
-                            <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">Plus d'informations</a>
+                            <h6 class="mb-4">120€ / nuit</h6>
+                            <form method="POST">
+                                <input type="hidden" name="date_arrivee" value="<?php echo htmlspecialchars($date_arrivee); ?>">
+                                <input type="hidden" name="date_depart" value="<?php echo htmlspecialchars($date_depart); ?>">
+                                <button type="submit" name="reserve3" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Réserver maintenant</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -790,5 +864,23 @@ if (isset($_POST['reserve1'])) {
         }
     </script>
     <?php require 'liens/footer.php'; ?>
+
+    <script>
+    // Initialiser la date minimale sur les deux champs
+    const today = new Date().toISOString().split('T')[0]; // Récupérer la date actuelle au format 'yyyy-mm-dd'
+    const dateArrivee = document.getElementById('date_arrivee');
+    const dateDepart = document.getElementById('date_depart');
+
+    dateArrivee.setAttribute('min', today); // Date minimale pour l'arrivée
+    dateDepart.setAttribute('min', today); // Date minimale pour le départ
+
+    // Mettre à jour la date minimale de départ en fonction de la date d'arrivée
+    dateArrivee.addEventListener('change', function () {
+        const selectedArrivee = dateArrivee.value; // Récupérer la date sélectionnée
+        if (selectedArrivee) {
+            dateDepart.setAttribute('min', selectedArrivee); // Mettre à jour la date minimale
+        }
+    });
+</script>
 </body>
 </html>

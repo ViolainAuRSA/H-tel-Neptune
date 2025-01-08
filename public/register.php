@@ -79,10 +79,10 @@
                 $date_creation = date("Y-m-d H:i:s");
                 $date_connexion = date("Y-m-d H:i:s");
 
-                $req = $DB->prepare("INSERT INTO users(nom, email, telephone, mot_de_passe, date_creation, date_connexion) VALUES (?, ?, ?, ?, ?, ?)");
+                $req = $DB->prepare("INSERT INTO users(nom, email, telephone, mot_de_passe, date_creation, date_connexion, room_1, room_2, room_3, date_arrivee, date_depart) VALUES (?, ?, ?, ?, ?, ?, 0, 0, 0, 0000-00-00, 0000-00-00)");
                 $req->execute(array($nom, $mail, $telephone, $crypt_password, $date_creation, $date_connexion));
 
-                
+                $_SESSION['success_message'] = "Utilisateur créé avec succès";
                 header("Location: login.php");
                 exit();
             }
